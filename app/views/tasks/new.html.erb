@@ -1,0 +1,14 @@
+
+<h1> Add a new Task</h1>
+
+<%= form_for(@task) do |f| %>
+  <p>Title</p> <%= f.text_field :title %>
+  <p>Details</p> <%= f.text_field :details %>
+  <p>Completed? <%= f.check_box :completed %> </p>
+  <%= f.submit %>
+<% end %>
+
+<div>
+  <p></p>
+  <%= link_to "Back", tasks_path %>
+</div>
